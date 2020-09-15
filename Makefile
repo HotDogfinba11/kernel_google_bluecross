@@ -1,6 +1,6 @@
 VERSION = 4
 PATCHLEVEL = 9
-SUBLEVEL = 235
+SUBLEVEL = 236
 EXTRAVERSION =
 NAME = Roaring Lionus
 
@@ -339,7 +339,9 @@ include scripts/Kbuild.include
 # Make variables (CC, etc...)
 AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
-LDGOLD	= $(CROSS_COMPILE)ld.gold
+REAL_CC		= $(CROSS_COMPILE)gcc
+LDGOLD		= $(CROSS_COMPILE)ld.gold
+REAL_CC		= $(CROSS_COMPILE)gcc
 CC		= $(CROSS_COMPILE)gcc
 CPP		= $(CC) -E
 AR		= $(CROSS_COMPILE)ar
